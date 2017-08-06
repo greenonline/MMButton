@@ -50,25 +50,10 @@ class MMButton: public MButton {
 class MMButton: public MButton {
 #endif
 private:
-/*	// Any button press >= HOLD_THRESHOLD milliseconds is considered a hold,
-	//	not a click.
-//	unsigned long holdThreshold;  // inherited from mButton
-//	unsigned long bounceThreshold;// inherited from mButton
-	// Was this button pushed (closed) when last checked?
-	boolean wasClosed;
-	// When was this button pushed (closed)?
-	unsigned long closeTimeMillis;
-	const int pin;
-	boolean clicked, held; // At last check, was this button clicked (held)?
-*/
+
         boolean isPulledUp=HIGH;  // set default here?
 public:
 	MMButton(int inputPin);
-//	void setHoldThreshold(unsigned long newThreshold);
-//	void setBounceThreshold(unsigned long newThreshold);
 	void setPullUpDown(boolean isUp);
-//	void setup();
 	void check(); //commented out to reduce compile errors
-//	boolean wasClicked();
-//	boolean wasHeld();
 };
