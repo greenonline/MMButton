@@ -1,11 +1,20 @@
-/*
+/**
+ * Encapsulate tracking pushes on a normally-open momentary button.
+ *
+ * After a call to check(), the button may report that it:
+ *  - wasClicked(): tapped briefly
+ *  - wasHeld(): pressed for a longer period of time (and perhaps still closed)
+ * The next call to check() will not report on that previous event.
+ *
+ *
+ * Put this file in your libraries folder along with MMButton.h
+ *
+ *
+ * Written by Mark Fickett
+ * Modified by Julian Loiacono December '14
+ * Further Modification by Greenonline 2017
+ */
 
-Put this file in your libraries folder along with mmButton.h
-
-Written by Mark Fickett
-Modified by Julian Loiacono December '14
-Further Modification by Greenonline 2017
-*/
 
 #include "MMButton.h"
 
